@@ -1,0 +1,17 @@
+cc_library_shared {
+    name: "libgpio",
+    srcs: ["libgpio.c"],
+    strip: {
+        keep_symbols: true,
+    },
+
+    shared_libs: [
+        "liblog",
+        "libcutils",
+    ],
+    header_libs: ["libutils_headers"],
+    proprietary: true,
+    owner: "renesas",
+    export_include_dirs:["."],
+
+}
